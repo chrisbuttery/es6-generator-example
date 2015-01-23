@@ -2,7 +2,7 @@
   "name": "generators",
   "version": "1.0.0",
   "description": "Using ES6 Generators to control flow",
-  "main": "generators.js",
+  "main": "script.js",
   "scripts": {
     "postinstall": "npm start",
     "start": "./node_modules/.bin/regenerator --include-runtime script.js > generators.js && open index.html"
