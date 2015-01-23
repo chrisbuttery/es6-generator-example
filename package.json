@@ -7,9 +7,10 @@
     "postinstall": "npm start",
     "start": "./node_modules/.bin/regenerator --include-runtime script.js > generators.js && open index.html"
   },
-  "author": "CB",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "private": true,
   "dependencies": {
+    "regenerator": "^0.8.9"
   }
 }
