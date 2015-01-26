@@ -84,10 +84,10 @@ let get = function (url) {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', url);
     xhr.onreadystatechange = function() {
-      let response = JSON.parse(xhr.responseText);
+      let response = xhr.responseText;
       if(xhr.readyState != 4) return;
       if (xhr.status === 200) {
-        callback(null, response);
+        callback(null, JSON.parse(response));
       }
       else {
         callback(response, null);
@@ -118,7 +118,7 @@ let getTweets = function* () {
     data = yield get('https://api.myjson.com/bins/29e3f');
     totalTweets.push(data);
 
-    // then do the other stuff
+    // then do the other stuff that rely on the tweet data being present
     showStats();
     showTimeline();
 
